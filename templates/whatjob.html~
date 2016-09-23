@@ -2,10 +2,26 @@
 <html>
 
   <head>
-    <title> {{title}} </title>
+    <title> {{ title }} </title>
   </head>
 
   <body>
-    {% for item in collection %}
-    {{item}}
+    <h1> What's my dream job? </h1>
+
+    <table style="width:25%" border=1>
+      <tr>
+	<th> Possible jobs </th>
+      </tr>
+      {% for item in collection %}
+      <tr>
+	<td> {{ item }} </td>
+      </tr>
+      {% endfor %}
+    </table>
     
+    <br>
+    <b> Your new job is: </b> {{ job }}
+
+  </body>
+
+</html>

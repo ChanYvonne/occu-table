@@ -11,10 +11,14 @@
     <table style="width:25%" border=1>
       <tr>
 	<th> Possible jobs </th>
+	<th> Percentage </th>
+	<th> Helpful Link </th>
       </tr>
       {% for item in collection %}
       <tr>
 	<td> {{ item }} </td>
+	<td> {{ collection[item.collection_id]}} </td>
+	<td> </td>
       </tr>
       {% endfor %}
     </table>
@@ -23,5 +27,4 @@
     <b> Your new job is: </b> {{ job }}
 
   </body>
-
 </html>
