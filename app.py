@@ -15,14 +15,16 @@ with open('occupations.csv','r') as csvfile:
             total_percentage = float(row[1])
         elif row[0] != "Job Class":
             # "Job Class" is the first row, with only headings
-            occupations[row[0]] = float(row[1])
+            occupations[row[0]] = [float(row[1]),str(row[2])]
 
+
+            
 def selectOccupation():
     randplace = random.random() * total_percentage
     curplace = 0.0
     last_job = None
     for job in occupations:
-        curplace += occupations[job]
+        curplace += occupations[job][0]
         last_job = job
         if curplace >= randplace:
             return job

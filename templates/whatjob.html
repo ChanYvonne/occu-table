@@ -6,19 +6,20 @@
   </head>
 
   <body>
-    <h1> What's my dream job? </h1>
-
-    <table style="width:25%" border=1>
+    <h1> Can't decide what to major in college? Can't decide what job you want in the future? <br> No need to worry because we'll decide for you!</h1>
+    <h2>We've even listed some links that can help you get started in each field! </h2>
+    
+    <table style="width:50%" border=1>
       <tr>
 	<th> Possible jobs </th>
 	<th> Percentage </th>
-	<th> Helpful Link </th>
+	<th> Helpful Links </th>
       </tr>
       {% for item in collection %}
       <tr>
 	<td> {{ item }} </td>
-	<td> {{ collection[item] }} </td>
-	<td> </td>
+	<td> {{ collection[item][0] }} </td>
+	<td> <a href = {{ collection[item][1] }}> Work in the {{ item }} Field! </a> </td>
       </tr>
       {% endfor %}
     </table>
