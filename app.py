@@ -8,7 +8,7 @@ occupations = {}
 
 total_percentage = None # They don't quite add to 100%
 
-with open('occupations.csv','r') as csvfile:
+with open('data/occupations.csv','r') as csvfile:
     words = csv.reader(csvfile)
     for row in words:
         if row[0] == "Total":
