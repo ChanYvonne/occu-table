@@ -1,6 +1,6 @@
 import csv, random
 
-occupation = {}
+occupations = {}
 
 total_percentage = None # They don't quite add to 100%
 
@@ -14,6 +14,8 @@ with open('data/occupations.csv','r') as csvfile:
             occupations[row[0]] = [float(row[1]),str(row[2])]
 
 
+def jobs():
+    return occupations
             
 def selectOccupation():
     randplace = random.random() * total_percentage
